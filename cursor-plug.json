@@ -1,0 +1,24 @@
+{
+  "_comment": "This file defines the runtime configuration for the MCP server. Copy the 'cursorkleo-mcp-server' block into your global MCP settings file to register and run the server.",
+  "mcpServers": {
+    "cursorkleo-mcp-server": {
+      "description": "Enhanced MCP server for real-time collaboration and AI assistance in Cursor.",
+      "command": "node",
+      "args": [
+        "./build/index.js"
+      ],
+      "env": {
+        "PORT": "3001",
+        "WEB_PORT": "3002",
+        "JWT_SECRET": "YOUR_SECRET_KEY_HERE",
+        "DATABASE_URL": "postgresql://user:password@host:port/database",
+        "REDIS_URL": "redis://host:port",
+        "LOG_LEVEL": "info",
+        "OPENAI_API_KEY": "YOUR_OPENAI_KEY_HERE",
+        "ANTHROPIC_API_KEY": "YOUR_ANTHROPIC_KEY_HERE"
+      },
+      "disabled": false,
+      "autoApprove": []
+    }
+  }
+} 
